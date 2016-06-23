@@ -17,7 +17,7 @@ post '/gateway' do
           when 'commits'
       resp = HTTParty.get(repo_url)
       resp = JSON.parse resp.body
-      respond_message "There are #{resp['commits_count']} on #{repo}"
+      respond_message "There are #{resp['open_commits_count']} on #{repo}"
   end
 end
 
